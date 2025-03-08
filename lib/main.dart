@@ -38,9 +38,12 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("PFT Scavenger Hunt", style: TextStyle(fontSize: 24)),
+            SizedBox(height: 30),
+            Image.asset('lib/assets/pft.png', scale: 3.5),
+            SizedBox(height: 20),
+            Text("add text here", style: TextStyle(fontSize: 17)),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -223,6 +226,8 @@ class EndScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("PFT Scavenger Hunt", style: TextStyle(fontSize: 24)),
+            SizedBox(height: 20),
+            Text("add text here", style: TextStyle(fontSize: 17)),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
