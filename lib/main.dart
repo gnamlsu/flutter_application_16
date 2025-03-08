@@ -162,7 +162,10 @@ class GameScreenState extends State<GameScreen> {
               onPressed:() {
                 checkAnswer();
               },
-              child: Text("Check Answer", style: TextStyle(fontSize: 18)),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+              ),
+              child: Text("Check Answer", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
             ),
             SizedBox(height: 20),
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
@@ -171,7 +174,10 @@ class GameScreenState extends State<GameScreen> {
               onPressed:() {
                 getHint();
               },
-              child: Text("Hint", style: TextStyle(fontSize: 18)),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+              ),
+              child: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
             ),
             SizedBox(height: 20),
             if (displayHint)
