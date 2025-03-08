@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(79, 46, 128, 1)),
         useMaterial3: true,
       ),
-      //home: const HomeScreen(),
       initialRoute: "/",
       routes: {
         "/": (context) => const HomeScreen(),
@@ -85,6 +84,7 @@ class GameScreenState extends State<GameScreen> {
   String result = "";
   Color resultColor = Color.fromRGBO(60, 222, 79, 1);
   bool nextButton = false;
+  bool hintButton = true;
   bool displayHint = false;
 
   void checkAnswer() {
@@ -93,6 +93,8 @@ class GameScreenState extends State<GameScreen> {
         result = "Correct!";
         resultColor = Color.fromRGBO(60, 222, 79, 1);
         nextButton = true;
+        hintButton = false;
+        displayHint = false;
       });
     }
     else {
@@ -116,6 +118,7 @@ class GameScreenState extends State<GameScreen> {
         result = "";
         _controller.clear();
         nextButton = false;
+        hintButton = true;
         displayHint = false;
       });
     }
@@ -124,6 +127,7 @@ class GameScreenState extends State<GameScreen> {
       result = "";
       _controller.clear();
       nextButton = false;
+      hintButton = true;
       displayHint = false;
       Navigator.pushReplacementNamed(context, "/end");
     }
@@ -173,15 +177,16 @@ class GameScreenState extends State<GameScreen> {
             SizedBox(height: 20),
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed:() {
-                getHint();
-              },
-              style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+            if (hintButton)
+              ElevatedButton(
+                onPressed:() {
+                  getHint();
+                },
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+                ),
+                child: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
               ),
-              child: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
-            ),
             SizedBox(height: 20),
             if (displayHint)
               Text(hints[cur], style: TextStyle(fontSize: 20)),
