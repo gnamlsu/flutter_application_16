@@ -64,7 +64,7 @@ class GameScreen extends StatefulWidget {
 }
 
 class GameScreenState extends State<GameScreen> {
-  List questions = ["Panera",
+  List questions = ["If you're feeling hungry but can't go far to get a meal, you can always rely on Panera for good, healthy food. They have a microwave to heat up your lunch as well but there is one restriction. What food product can you not microwave?",
                     "When students are in need of a quick refreshment, they can head down the hallway to the vending machines. There’s a great selection of snacks and drinks. On the far left, students can conveniently grab a _____ or blue book if they forgot to get one before a test.",
                     "The RoyOMartin Auditorium honors Roy O. Martin Sr., the business pioneer and Martin family patriarch who grew a small sawmill in Alexandria, Louisiana into a leading lumber company. His family has continued his legacy, focusing on their core values. What is the acronym for the family’s values?",
                     "Whenever I need to speak to a counselor or need general advising,the student services center is the first place I think to go to. They can refer you to where you can get more specific information or give you advice regarding your degree audit or career. It is named after Dr. _____ A. _____.",
@@ -74,8 +74,8 @@ class GameScreenState extends State<GameScreen> {
                     "The engineering honor society is the only honor society that represents engineers across all disciplines. It was first founded in 1885 at Lehigh University. What is the name of the engineering honor society as described on the sculpture?",
                     "Patrick F. Taylor Hall was renovated and expanded to hold more state-of-the-art classrooms and labs for its students. The commemorative plaque lists the people who made the renovation possible. What year was the building renovation?",
                     "The College of Engineering would not be the department it is today without the contributions of past alumni and many others. The support from the founding members allows the education and cultivation of the best engineers and computer scientists as well as support for all faculty. Take a look at the inducted members. What is James Rutland's nickname?"];
-  List answers = ["Panera", "scantron", "RICHES", "William Brookshire", "Leader", "Ford", "Roz", "Tau Beta Pi", "2014", "Pepper"];
-  List hints = ["Panera hint", "No. 2 pencils only!", "roy o martin hint", "Who is the short biography about?", "Boldest word from the top starting with L.", "It rhymes with cord.", "Monsters, Inc. character", "Read the first line on the sculpture’s placard.", "renovation hint", "Think of the type of vegetable a jalapeno is (it’s spicy)."];
+  List answers = ["Seafood", "scantron", "RICHES", "William Brookshire", "Leader", "Ford", "Roz", "Tau Beta Pi", "2014", "Pepper"];
+  List hints = ["Read the note on the microwave.", "No. 2 pencils only!", "roy o martin hint", "Who is the short biography about?", "Boldest word from the top starting with L.", "It rhymes with cord.", "Monsters, Inc. character", "Read the first line on the sculpture’s placard.", "renovation hint", "Think of the type of vegetable a jalapeno is (it’s spicy)."];
   
   int cur = 0;
   final TextEditingController _controller = TextEditingController();
