@@ -75,7 +75,7 @@ class GameScreenState extends State<GameScreen> {
                     "Patrick F. Taylor Hall was renovated and expanded to hold more state-of-the-art classrooms and labs for its students. The commemorative plaque lists the people who made the renovation possible. What year was the building renovation?",
                     "The College of Engineering would not be the department it is today without the contributions of past alumni and many others. The support from the founding members allows the education and cultivation of the best engineers and computer scientists as well as support for all faculty. Take a look at the inducted members. What is James Rutland's nickname?"];
   List answers = ["Seafood", "scantron", "RICHES", "William Brookshire", "Leader", "Ford", "Roz", "Tau Beta Pi", "2014", "Pepper"];
-  List hints = ["Read the note on the microwave.", "No. 2 pencils only!", "roy o martin hint", "Who is the short biography about?", "Boldest word from the top starting with L.", "It rhymes with cord.", "Monsters, Inc. character", "Read the first line on the sculpture’s placard.", "renovation hint", "Think of the type of vegetable a jalapeno is (it’s spicy)."];
+  List hints = ["Read the note on the microwave.", "No. 2 pencils only!", "roy o martin hint", "Who is the short biography about?", "Boldest word from the top starting with L.", "It rhymes with cord.", "Monsters, Inc. character", "First line on the sculpture’s placard", "renovation hint", "A spicy vegetable like a jalapeño"];
   
   int cur = 0;
   final TextEditingController _controller = TextEditingController();
@@ -182,7 +182,10 @@ class GameScreenState extends State<GameScreen> {
                 onPressed: () {
                   getNext();
                 },
-                child: Text("Next", style: TextStyle(fontSize: 18)),
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                ),
+                child: Text("Next", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
               ),
           ],
         ),
