@@ -64,8 +64,17 @@ class GameScreen extends StatefulWidget {
 }
 
 class GameScreenState extends State<GameScreen> {
-  List questions = ["What?1", "What?2", "what?3"];
-  List answers = ["Answer1", "answer2", "Answer 3"];
+  List questions = ["Panera",
+                    "When students are in need of a quick refreshment, they can head down the hallway to the vending machines. There’s a great selection of snacks and drinks. On the far left, students can conveniently grab a _____ or blue book if they forgot to get one before a test.",
+                    "The RoyOMartin Auditorium honors Roy O. Martin Sr., the business pioneer and Martin family patriarch who grew a small sawmill in Alexandria, Louisiana into a leading lumber company. His family has continued his legacy, focusing on their core values. What is the acronym for the family’s values?",
+                    "Whenever I need to speak to a counselor or need general advising,the student services center is the first place I think to go to. They can refer you to where you can get more specific information or give you advice regarding your degree audit or career. It is named after Dr. _____ A. _____.",
+                    "The best view of the Capstone Gallery stairs is from the 2nd floor balcony. The banners above the stairs describe the common traits of a college of engineering student. The most common trait according to the banner is L_____.",
+                    "Walking around the 2nd floor, you can't miss this room with a full-sized sedan in it. In tandem with cameras, projectors, and screens, the Driving Simulation Lab is one of PFT's notable research facilities. The make of the car inside this room is a _____.",
+                    "The Chevron Center is a welcoming facility for students to utilize at any time. It has a computer lab, 3D printer, poster services, and more. But you have to remember to sign in to log that its services are in use so that the center can be kept running. What is the name of the movie character that is reminding you to sign in at the front desk?",
+                    "The engineering honor society is the only honor society that represents engineers across all disciplines. It was first founded in 1885 at Lehigh University. What is the name of the engineering honor society as described on the sculpture?",
+                    "Patrick F. Taylor Hall was renovated and expanded to hold more state-of-the-art classrooms and labs for its students. The commemorative plaque lists the people who made the renovation possible. What year was the building renovation?",
+                    "The College of Engineering would not be the department it is today without the contributions of past alumni and many others. The support from the founding members allows the education and cultivation of the best engineers and computer scientists as well as support for all faculty. Take a look at the inducted members. What is James Rutland's nickname?"];
+  List answers = ["Panera", "scantron", "RICHES", "William Brookshire", "Leader", "Ford", "Roz", "Tau Beta Pi", "2014", "Pepper"];
   
   int cur = 0;
   final TextEditingController _controller = TextEditingController();
@@ -108,19 +117,22 @@ class GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt Game"),
+        title: Text("PFT Scavenger Hunt"),
         backgroundColor: Color.fromRGBO(255, 84, 84, 1),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text("Question ${cur+1}", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(questions[cur], style: TextStyle(fontSize: 20)),
+            Container(
+              width: 550,
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(questions[cur], style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
+                ),
               ),
             ),
             SizedBox(height: 20),
@@ -162,7 +174,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt End Screen"),
+        title: Text("PFT Scavenger Hunt"),
         backgroundColor: Color.fromRGBO(255, 84, 84, 1),
       ),
       body: Center(
