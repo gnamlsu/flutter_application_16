@@ -43,7 +43,15 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 30),
             Image.asset('lib/assets/pft.png', scale: 3.5),
             SizedBox(height: 20),
-            Text("add text here", style: TextStyle(fontSize: 17)),
+            Container(
+              width: 550,
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Welcome to the PFT Scavenger Hunt!\n\nYou will take a short yet interactive tour to some notable locations in Patrick F. Taylor Hall.\n\nEach location will have an associated question that you must answer correctly to move on to the next location of the tour. To find the answer, you may have to look around and read some of the plaques hanging around. Some answers may be right in front of you, so look closely!\n\nThe answers are not case-sensitive, and you can use hints to help you.\n\nThe goal is to make learning about and navigating PFT hall fun and engaging. We hope you enjoy!", 
+                style: TextStyle(fontSize: 17), 
+                textAlign: TextAlign.center),
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
