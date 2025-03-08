@@ -47,7 +47,10 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacementNamed(context, "/game");
               },
-              child: Text("Start/Play", style: TextStyle(fontSize: 18)),
+              style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                ),
+              child: Text("Start", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
             ),
           ],
         ),
@@ -220,7 +223,10 @@ class EndScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacementNamed(context, "/");
               },
-              child: Text("Play Again", style: TextStyle(fontSize: 18)),
+              style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                ),
+              child: Text("Play Again", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
             ),
           ],
         ),
