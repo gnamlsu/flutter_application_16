@@ -235,7 +235,15 @@ class EndScreen extends StatelessWidget {
           children: [
             Text("PFT Scavenger Hunt", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
-            Text("add text here", style: TextStyle(fontSize: 17)),
+            Container(
+              width: 550,
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Congratulations, you made it to the end of the tour!\n\nWe hope you enjoyed your tour and would like to see you again!\n\nGeaux Tigers!", 
+                style: TextStyle(fontSize: 20), 
+                textAlign: TextAlign.center),
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
