@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt"),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
         backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
@@ -80,20 +80,30 @@ class GameScreenState extends State<GameScreen> {
   int cur = 0;
   final TextEditingController _controller = TextEditingController();
   String result = "";
+  Color resultColor = Color.fromRGBO(60, 222, 79, 1);
   bool nextButton = false;
+  bool displayHint = false;
 
   void checkAnswer() {
     if (_controller.text.trim().toLowerCase() == answers[cur].toLowerCase()) {
       setState(() {
         result = "Correct!";
+        resultColor = Color.fromRGBO(60, 222, 79, 1);
         nextButton = true;
       });
     }
     else {
       setState(() {
         result = "Wrong, try again.";
+        resultColor = Color.fromRGBO(255, 69, 69, 1);
       });
     }
+  }
+
+  void getHint() {
+    setState(() {
+      displayHint = true;
+    });
   }
 
   void getNext() {
@@ -103,6 +113,7 @@ class GameScreenState extends State<GameScreen> {
         result = "";
         _controller.clear();
         nextButton = false;
+        displayHint = false;
       });
     }
     else {
@@ -110,6 +121,7 @@ class GameScreenState extends State<GameScreen> {
       result = "";
       _controller.clear();
       nextButton = false;
+      displayHint = false;
       Navigator.pushReplacementNamed(context, "/end");
     }
   }
@@ -153,7 +165,17 @@ class GameScreenState extends State<GameScreen> {
               child: Text("Check Answer", style: TextStyle(fontSize: 18)),
             ),
             SizedBox(height: 20),
-            Text(result, style: TextStyle(fontSize: 20)),
+            Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed:() {
+                getHint();
+              },
+              child: Text("Hint", style: TextStyle(fontSize: 18)),
+            ),
+            SizedBox(height: 20),
+            if (displayHint)
+              Text(hints[cur], style: TextStyle(fontSize: 20)),
             SizedBox(height: 20),
             if (nextButton)
               ElevatedButton(
@@ -176,7 +198,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt"),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
         backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
