@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'App 6',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(79, 46, 128, 1)),
         useMaterial3: true,
       ),
       //home: const HomeScreen(),
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("PFT Scavenger Hunt"),
-        backgroundColor: Color.fromRGBO(255, 84, 84, 1),
+        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
         child: Column(
@@ -75,6 +75,7 @@ class GameScreenState extends State<GameScreen> {
                     "Patrick F. Taylor Hall was renovated and expanded to hold more state-of-the-art classrooms and labs for its students. The commemorative plaque lists the people who made the renovation possible. What year was the building renovation?",
                     "The College of Engineering would not be the department it is today without the contributions of past alumni and many others. The support from the founding members allows the education and cultivation of the best engineers and computer scientists as well as support for all faculty. Take a look at the inducted members. What is James Rutland's nickname?"];
   List answers = ["Panera", "scantron", "RICHES", "William Brookshire", "Leader", "Ford", "Roz", "Tau Beta Pi", "2014", "Pepper"];
+  List hints = ["Panera hint", "No. 2 pencils only!", "roy o martin hint", "brookshire hint", "leader hint", "car hint", "Monsters, Inc. character", "tau beta hint", "renovation hint", "pepper hint"];
   
   int cur = 0;
   final TextEditingController _controller = TextEditingController();
@@ -117,13 +118,14 @@ class GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt"),
-        backgroundColor: Color.fromRGBO(255, 84, 84, 1),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
+        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(height: 20),
             Text("Question ${cur+1}", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
             Container(
@@ -175,7 +177,7 @@ class EndScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("PFT Scavenger Hunt"),
-        backgroundColor: Color.fromRGBO(255, 84, 84, 1),
+        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
         child: Column(
