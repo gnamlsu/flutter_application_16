@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: GoogleFonts.readexPro(color: Color.fromRGBO(252, 207, 33, 1))),
         backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
                 ),
-              child: Text("Start", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+              child: Text("Start", style: GoogleFonts.readexPro(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
             ),
           ],
         ),
@@ -148,7 +148,7 @@ class GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: GoogleFonts.readexPro(color: Color.fromRGBO(252, 207, 33, 1))),
         backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
@@ -183,7 +183,7 @@ class GameScreenState extends State<GameScreen> {
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
               ),
-              child: Text("Check Answer", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
+              child: Text("Check Answer", style: GoogleFonts.readexPro(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
             ),
             SizedBox(height: 20),
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
@@ -197,7 +197,7 @@ class GameScreenState extends State<GameScreen> {
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
                 ),
-                label: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
+                label: Text("Hint", style: GoogleFonts.readexPro(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
               ),
             SizedBox(height: 20),
             if (displayHint)
@@ -211,7 +211,7 @@ class GameScreenState extends State<GameScreen> {
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1),),
                 ),
-                child: Text("Next", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+                child: Text("Next", style: GoogleFonts.readexPro(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
               ),
           ],
         ),
@@ -227,7 +227,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: GoogleFonts.readexPro(color: Color.fromRGBO(252, 207, 33, 1))),
         backgroundColor: Color.fromRGBO(79, 46, 128, 1),
       ),
       body: Center(
@@ -235,8 +235,6 @@ class EndScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('lib/assets/lsu.png', scale: 1.8),
-            SizedBox(height: 20),
-            Text("PFT Scavenger Hunt", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
             Container(
               width: 550,
@@ -255,7 +253,7 @@ class EndScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
                 ),
-              child: Text("Play Again", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+              child: Text("Play Again", style: GoogleFonts.readexPro(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
             ),
           ],
         ),
