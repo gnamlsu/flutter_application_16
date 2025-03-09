@@ -81,7 +81,7 @@ class GameScreenState extends State<GameScreen> {
                     "When students are in need of a quick refreshment, they can head down the hallway to the vending machines. There’s a great selection of snacks and drinks. On the far left, students can conveniently grab a _____ or blue book if they forgot to get one before a test.",
                     "The RoyOMartin Auditorium honors Roy O. Martin Sr., the business pioneer and Martin family patriarch who grew a small sawmill in Alexandria, Louisiana into a leading lumber company. His family has continued his legacy, focusing on their core values. What is the acronym for the family’s values?",
                     "Whenever I need to speak to a counselor or need general advising,the student services center is the first place I think to go to. They can refer you to where you can get more specific information or give you advice regarding your degree audit or career. It is named after Dr. _____ A. _____.",
-                    "The best view of the Capstone Gallery stairs is from the 2nd floor balcony. The banners above the stairs describe the common traits of a college of engineering student. The most common trait according to the banner is L_____.",
+                    "The best view of the Capstone Gallery stairs is from the 2nd floor balcony. The banners above the stairs describe the common traits of a college of engineering student. The most common trait according to the banner is _____.",
                     "Walking around the 2nd floor, you can't miss this room with a full-sized sedan in it. In tandem with cameras, projectors, and screens, the Driving Simulation Lab is one of PFT's notable research facilities. The make of the car inside this room is a _____.",
                     "The Chevron Center is a welcoming facility for students to utilize at any time. It has a computer lab, 3D printer, poster services, and more. But you have to remember to sign in to log that its services are in use so that the center can be kept running. What is the name of the movie character that is reminding you to sign in at the front desk?",
                     "The engineering honor society is the only honor society that represents engineers across all disciplines. It was first founded in 1885 at Lehigh University. What is the name of the engineering honor society as described on the sculpture?",
@@ -189,14 +189,15 @@ class GameScreenState extends State<GameScreen> {
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
             SizedBox(height: 20),
             if (hintButton)
-              ElevatedButton(
+              ElevatedButton.icon(
+                icon: Icon(Icons.lightbulb_outline_rounded, color: Color.fromRGBO(252, 207, 33, 1)),
                 onPressed:() {
                   getHint();
                 },
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
                 ),
-                child: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
+                label: Text("Hint", style: TextStyle(fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
               ),
             SizedBox(height: 20),
             if (displayHint)
@@ -208,7 +209,7 @@ class GameScreenState extends State<GameScreen> {
                   getNext();
                 },
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1),),
                 ),
                 child: Text("Next", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
               ),
@@ -233,6 +234,8 @@ class EndScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('lib/assets/lsu.png', scale: 1.8),
+            SizedBox(height: 20),
             Text("PFT Scavenger Hunt", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
             Container(
