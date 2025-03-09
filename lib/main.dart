@@ -253,7 +253,7 @@ class EndScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
                 ),
-              child: Text("Play Again", style: TextStyle(fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+              child: Text("Play Again", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
             ),
           ],
         ),
