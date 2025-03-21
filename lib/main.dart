@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, "/game");
               },
               style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1)),
                 ),
               child: Text("Start", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
@@ -148,7 +148,7 @@ class GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -183,21 +183,21 @@ class GameScreenState extends State<GameScreen> {
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
               ),
-              child: Text("Check Answer", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
+              child: Text("Check Answer", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
             ),
             SizedBox(height: 20),
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
             SizedBox(height: 20),
             if (hintButton)
               ElevatedButton.icon(
-                icon: Icon(Icons.lightbulb_outline_rounded, color: Color.fromRGBO(252, 207, 33, 1)),
+                icon: Icon(Icons.lightbulb_outline_rounded, color: Color.fromRGBO(253, 208, 35, 1)),
                 onPressed:() {
                   getHint();
                 },
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
                 ),
-                label: Text("Hint", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
+                label: Text("Hint", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
               ),
             SizedBox(height: 20),
             if (displayHint)
@@ -209,7 +209,7 @@ class GameScreenState extends State<GameScreen> {
                   getNext();
                 },
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1),),
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1),),
                 ),
                 child: Text("Next", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
               ),
@@ -227,7 +227,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -251,7 +251,7 @@ class EndScreen extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, "/");
               },
               style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1)),
                 ),
               child: Text("Play Again", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
