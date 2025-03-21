@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'App 6',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(79, 46, 128, 1)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(70, 29, 124, 1)),
         useMaterial3: true,
       ),
       initialRoute: "/",
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
-        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
+        backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
         child: Column(
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
                 ),
-              child: Text("Start", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+              child: Text("Start", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
           ],
         ),
@@ -149,7 +149,7 @@ class GameScreenState extends State<GameScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
-        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
+        backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
         child: Column(
@@ -181,7 +181,7 @@ class GameScreenState extends State<GameScreen> {
                 checkAnswer();
               },
               style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+                backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
               ),
               child: Text("Check Answer", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
             ),
@@ -195,7 +195,7 @@ class GameScreenState extends State<GameScreen> {
                   getHint();
                 },
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(79, 46, 128, 1)),
+                  backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
                 ),
                 label: Text("Hint", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(252, 207, 33, 1))),
               ),
@@ -211,7 +211,7 @@ class GameScreenState extends State<GameScreen> {
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1),),
                 ),
-                child: Text("Next", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+                child: Text("Next", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
               ),
           ],
         ),
@@ -228,7 +228,7 @@ class EndScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(252, 207, 33, 1))),
-        backgroundColor: Color.fromRGBO(79, 46, 128, 1),
+        backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
         child: Column(
@@ -253,7 +253,7 @@ class EndScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(252, 207, 33, 1)),
                 ),
-              child: Text("Play Again", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(79, 46, 128, 1))),
+              child: Text("Play Again", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
           ],
         ),
