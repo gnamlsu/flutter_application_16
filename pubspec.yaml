@@ -89,13 +89,20 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   fonts:
-    - family: Proxima Nova
+    - family: ProximaNova
       fonts:
         - asset: lib/assets/ProximaNova/proximanova_regular.ttf
-        - asset: lib/assets/ProximaNova/proximanova_black.ttf
+          weight: 600
+    - family: ProximaNovaBlack
+      fonts:
+        - asset: lib/assets/ProximaNova/proximanova_black.otf
           weight: 900
+    - family: ProximaNovaBold
+      fonts:
         - asset: lib/assets/ProximaNova/proximanova_bold.otf
           weight: 700
+    - family: ProximaNovaLight
+      fonts:
         - asset: lib/assets/ProximaNova/proximanova_light.otf
           weight: 300
   #
