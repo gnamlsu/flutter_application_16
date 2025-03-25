@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ProximaNova', fontWeight: FontWeight.w900, color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(10),
                 child: Text("Welcome to the PFT Scavenger Hunt!\n\nYou will take a short yet interactive tour to some notable locations in Patrick F. Taylor Hall.\n\nEach location will have an associated question that you must answer correctly to move on to the next location of the tour. To find the answer, you may have to look around and read some of the plaques hanging around. Some answers may be right in front of you, so look closely!\n\nThe answers are not case-sensitive, and you can use hints to help you.\n\nThe goal is to make learning about and navigating PFT hall fun and engaging. We hope you enjoy!", 
-                style: TextStyle(fontSize: 17), 
+                style: TextStyle(fontFamily: 'ProximaNova', fontWeight: FontWeight.normal, fontSize: 17), 
                 textAlign: TextAlign.center),
               ),
             ),
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1)),
                 ),
-              child: Text("Start", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
+              child: Text("Start", style: TextStyle(fontFamily: 'ProximaNova', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
           ],
         ),
@@ -148,7 +148,7 @@ class GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ProximaNova', fontWeight: FontWeight.w900, color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -183,7 +183,7 @@ class GameScreenState extends State<GameScreen> {
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
               ),
-              child: Text("Check Answer", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
+              child: Text("Check Answer", style: TextStyle(fontFamily: 'ProximaNova', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
             ),
             SizedBox(height: 20),
             Text(result, style: TextStyle(fontSize: 20, color: resultColor)),
@@ -197,7 +197,7 @@ class GameScreenState extends State<GameScreen> {
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(70, 29, 124, 1)),
                 ),
-                label: Text("Hint", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
+                label: Text("Hint", style: TextStyle(fontFamily: 'ProximaNova', fontSize: 18, color: Color.fromRGBO(253, 208, 35, 1))),
               ),
             SizedBox(height: 20),
             if (displayHint)
@@ -211,7 +211,7 @@ class GameScreenState extends State<GameScreen> {
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1),),
                 ),
-                child: Text("Next", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
+                child: Text("Next", style: TextStyle(fontFamily: 'ProximaNova', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
               ),
           ],
         ),
@@ -227,7 +227,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ReadexPro', color: Color.fromRGBO(253, 208, 35, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ProximaNova', fontWeight: FontWeight.w900, color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(
@@ -253,7 +253,7 @@ class EndScreen extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(Color.fromRGBO(253, 208, 35, 1)),
                 ),
-              child: Text("Play Again", style: TextStyle(fontFamily: 'ReadexPro', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
+              child: Text("Play Again", style: TextStyle(fontFamily: 'ProximaNova', fontSize: 18, color: Color.fromRGBO(70, 29, 124, 1))),
             ),
           ],
         ),
