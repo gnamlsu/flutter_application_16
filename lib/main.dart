@@ -238,7 +238,7 @@ class EndScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('lib/assets/lsu_logo.png', scale: 1),
+            Image.asset('lib/assets/engr_logo.png', scale: 1),
             SizedBox(height: 20),
             Container(
               width: 550,
