@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_16/homescreen.dart';
+import 'package:flutter_application_16/instructionscreen.dart';
 import 'package:flutter_application_16/gamescreen.dart';
 import 'package:flutter_application_16/endscreen.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const HomeScreen(),
+        "/htp": (context) => const InstructionScreen(),
         "/game": (context) => const GameScreen(),
         "/end": (context) => const EndScreen(),
       },
