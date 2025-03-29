@@ -8,7 +8,7 @@ class EndScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ProximaNova', fontWeight: FontWeight.w900, color: Color.fromRGBO(253, 208, 35, 1))),
+        title: Text("PFT Scavenger Hunt", style: TextStyle(fontFamily: 'ProximaNovaBlack', color: Color.fromRGBO(253, 208, 35, 1))),
         backgroundColor: Color.fromRGBO(70, 29, 124, 1),
       ),
       body: Center(

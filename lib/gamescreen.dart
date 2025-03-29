@@ -89,7 +89,7 @@ class GameScreenState extends State<GameScreen> {
             SizedBox(height: 20),
             Text("Question ${cur+1}", style: TextStyle(fontFamily: 'ProximaNovaBlack', fontSize: 24)),
             SizedBox(height: 20),
-            Text("Question", style: TextStyle(fontFamily: 'ProximaNovaBold', fontWeight: FontWeight.w700, fontSize: 24)),
+            Text("Question", style: TextStyle(fontFamily: 'ProximaNovaBold', fontSize: 24)),
             Container(
               width: 550,
               child: Card(
